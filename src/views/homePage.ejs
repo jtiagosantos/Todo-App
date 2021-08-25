@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/stylesheets/homePage.css">
+</head>
+<body>
+  <header>
+    <h1>Todo-App</h1>
+    <button>
+      <a href="/add_task_page"><i class="fas fa-plus"></i>Adicionar Tarefa</a>
+    </button>
+  </header>
+  <main>
+    <% if(tasks.length == 0) { %>
+      <h4 class="message_no_task">Sem tarefas no momento!</h4>
+    <% } %>
+    <% tasks.forEach(function(task){ %>
+      <div class="container-task <%- task.done ? 'done' : ''%>">
+        <div class="info-task">
+          <h4><%= task.title %></h4>
+          <p><%= task.description %></p>
+        </div>
+        <div class="buttons">
+          <a href="/done_task/<%= task._id %>" class="<%- task.done ? 'done' : ''%>">
+            <i class="fas fa-check-square"></i>
+          </a>
+          <a href="/update_task_page/<%= task._id %>" class="<%- task.done ? 'done' : ''%>">
+            <i class="fas fa-pen-square"></i>
+          </a>
+          <a href="/delete_task/<%= task._id %>">
+            <i class="fas fa-minus-square"></i>
+          </a>
+        </div>
+      </div>
+    <% }) %>
+  </main>
+</body>
+</html>

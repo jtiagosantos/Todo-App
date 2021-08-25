@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  padding-top: 10px;
+  color: rgb(65, 64, 64);   
+}
+
+header {
+  width: 100vw;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+header button {
+  padding: 10px;
+  background: rgb(49, 133, 49);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: filter 0.2s;
+}
+
+header button:hover {
+  filter: brightness(0.9);
+}
+
+header button a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header button i {
+  margin-right: 5px;
+}
+
+main {
+  padding: 40px 15px 0 15px; 
+}
+
+main .message_no_task {
+  text-align: center;
+  margin-top: 30px;
+  color: rgb(221, 85, 85);
+}
+
+main div.container-task {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+
+  min-height: 110px;
+}
+
+main div.container-task.done {
+  border: 1px solid gray;  
+  background: #D8DcDD;
+  opacity: .5;
+}
+
+main .container-task .info-task h4 {
+  margin-bottom: 5px;
+}
+
+main .container-task .info-task p {
+  width: 1170px;
+  word-break: break-all;
+  line-height: 20px;
+}
+
+main div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+main .buttons a i {
+  font-size: 26px;
+  opacity: 0.8;
+}
+
+main .buttons a:nth-child(1) i {
+  color: rgb(61, 99, 206);
+}
+
+main .buttons a:nth-child(2) i {
+  color: #272626;
+}
+
+main .buttons a:nth-child(3) i {
+  color: rgb(226, 51, 51);
+}
+
+main .buttons a:nth-child(2){
+  margin: 0 5px;
+}
+
+main .buttons a.done {
+  display: none;
+}
