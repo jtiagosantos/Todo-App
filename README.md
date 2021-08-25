@@ -48,7 +48,7 @@ $ git clone https://github.com/jtiagosantos/todo-app.git
 $ cd todo-app
 ```
 
-:heavy_check_mark: Create your own cluster in Mongodb Atlas.
+:heavy_check_mark: Create your own cluster in [Mongodb Atlas](https://www.mongodb.com/cloud/atlas).
 
 :heavy_check_mark: Create an .env file at the root of project.
 
